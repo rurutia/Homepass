@@ -6,7 +6,8 @@ require.config({
 
 require(
     [
-        'app'
+        'app',
+        'login/controllers/loginController'
     ],
     function () {
         angular.bootstrap(document, ['homepassApp']);

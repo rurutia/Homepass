@@ -6,7 +6,13 @@ define([], function () {
 
     app.config(['$routeProvider',
         function ($routeProvider) {
-
+            $routeProvider
+            .when('/login', {
+                templateUrl: '/app/login/views/login.html',
+                controller: 'loginCtrl',
+                controllerAs: 'vm'
+            })
+            .otherwise({ redirectTo: '/login' });
 
         }]);
 
