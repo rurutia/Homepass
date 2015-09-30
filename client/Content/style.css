@@ -5,3 +5,9 @@
 .bg-image {
 	background: url(images/Homepass-people-inspection-blue.jpg) no-repeat right;
 }
+
+.login-logo {
+	margin: 10px;
+	width: 122px;
+	height: 30px;
+}
