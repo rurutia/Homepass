@@ -2,7 +2,7 @@
 
 define([], function () {
 
-    var app = angular.module('homepassApp', ['ngRoute']);
+    var app = angular.module('homepassApp', ['ngRoute', 'ngMaterial']);
 
     app.config(['$routeProvider',
         function ($routeProvider) {
