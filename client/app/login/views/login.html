@@ -1,37 +1,32 @@
 <div class="row">
-<div class="col-xs-3 pull-left">
-	<img width="122" height="30" class="login-logo" src="/Content/images/BlackLogoFull.png" />
-</div>
-</div>
-
-
-
-<div class="md-padding">
-    <h1 class="md-title">Enter an address</h1>
-<div class="layout layout-row">
-
-      <md-input-container class="md-default-theme">
-        <label for="input_1">Street Name</label>
-        <input class="md-input" id="input_1">
-      </md-input-container>
-
-      <md-input-container class="md-default-theme">
-        <label for="input_2">City</label>
-        <input class="md-input" id="input_2">
-      </md-input-container>
-
-      <md-input-container class="md-default-theme">
-		  <md-select class="width-100" data-ng-model="task.priority">
-		  <md-select-label>Select a number</md-select-label>
-		    <md-option value="one">One</md-option>
-		    <md-option value="two">Two</md-option>
-		    <md-option value="three">Three</md-option>
-		    <md-option value="four">Four</md-option>
-		    <md-option value="five">Five</md-option>
-		  </md-select>
-
-      </md-input-container>
-
-
-    </div>
+  <div class="col-xs-3 pull-left">
+  	<img width="122" height="30" class="login-logo" src="/Content/images/BlackLogoFull.png" />
   </div>
+</div>
+
+<div class="spacer md-padding">
+  <h1>Welcome</h1>
+  <div class="layout layout-row">
+    <md-input-container class="md-default-theme">
+      <md-select placeholder="Country" data-ng-model="vm.countryCode">
+          <md-option ng-repeat="country in vm.countryPhoneCodes" value="{{country.code}}">
+            {{country.name}}({{country.dial_code}})
+          </md-option>
+      </md-select>
+    </md-input-container>
+
+    <md-input-container class="md-default-theme">
+      <label>Your mobile</label>
+      <input class="md-input">
+    </md-input-container>
+  </div>
+
+  <md-content class="spacer">
+    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+      <md-button id="login-continue-btn" class="md-raised md-primary">Continue</md-button>
+    </section>
+    <section>
+      <div class="terms">By continuing you agree to <a href="http://www.homepass.com/terms/agent/">Terms</a> and <a href="http://homepass.com/terms/privacy/agent">Private Policy</a></div>
+    </section>
+  </md-content>
+</div>

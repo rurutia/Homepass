@@ -7,6 +7,7 @@ require.config({
 require(
     [
         'app',
+        'util/countryPhoneCodes',
         'login/controllers/loginController'
     ],
     function () {

@@ -11,3 +11,22 @@
 	width: 122px;
 	height: 30px;
 }
+
+.spacer {
+	margin-top: 170px;
+}
+
+#login-continue-btn {
+  background: #03a9f4;
+  font-weight: bold;
+}
+
+.terms {
+	color: rgba(0,0,0,0.26);
+	text-align: center;
+}
+
+.terms a {
+	color: rgba(0,0,0,0.26);
+	text-decoration: underline;
+}
