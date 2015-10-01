@@ -6,27 +6,36 @@
 
 <div class="spacer md-padding">
   <h1>Welcome</h1>
-  <div class="layout layout-row">
-    <md-input-container class="md-default-theme">
-      <md-select placeholder="Country" data-ng-model="vm.countryCode">
-          <md-option ng-repeat="country in vm.countryPhoneCodes" value="{{country.code}}">
-            {{country.name}}({{country.dial_code}})
-          </md-option>
-      </md-select>
-    </md-input-container>
+  <form name="loginForm" ng-submit="vm.submitLoginForm(loginForm.$valid)" novalidate>
+    <div class="layout layout-row">
+      <md-input-container class="md-default-theme">
+        <md-select placeholder="Country" name="countryCode" data-ng-model="vm.countryCode" required>
+            <md-option ng-repeat="country in vm.countryPhoneCodes" value="{{country.code}}">
+              {{country.name}}({{country.dial_code}})
+            </md-option>
+        </md-select>
+        <div class="errors" data-ng-messages="loginForm.countryCode.$error" ng-if="loginForm.$dirty || vm.submitted">
+          <div data-ng-message="required">requried</div>
+        </div>
+      </md-input-container>
 
-    <md-input-container class="md-default-theme">
-      <label>Your mobile</label>
-      <input class="md-input">
-    </md-input-container>
-  </div>
+      <md-input-container class="md-default-theme">
+        <label>Your mobile</label>
+        <input class="md-input" name="mobile" data-ng-model="vm.mobile" data-ng-pattern="/^0411789776$/" required>
+        <div class="errors" data-ng-messages="loginForm.mobile.$error" ng-if="loginForm.$dirty || vm.submitted">
+          <div data-ng-message="pattern">the number is invalid because there is no account(for test only:0411789776).</div>
+          <div data-ng-message="required">requried</div>
+        </div>
+      </md-input-container>
+    </div>
 
-  <md-content class="spacer">
-    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
-      <md-button id="login-continue-btn" class="md-raised md-primary">Continue</md-button>
-    </section>
-    <section>
-      <div class="terms">By continuing you agree to <a href="http://www.homepass.com/terms/agent/">Terms</a> and <a href="http://homepass.com/terms/privacy/agent">Private Policy</a></div>
-    </section>
-  </md-content>
+    <md-content class="spacer">
+      <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+        <md-button type="submit" id="login-continue-btn" class="md-raised md-primary">Continue</md-button>
+      </section>
+      <section>
+        <div class="terms">By continuing you agree to <a href="http://www.homepass.com/terms/agent/">Terms</a> and <a href="http://homepass.com/terms/privacy/agent">Private Policy</a></div>
+      </section>
+    </md-content>
+  </form>
 </div>
