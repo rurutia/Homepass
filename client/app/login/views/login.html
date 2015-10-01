@@ -9,12 +9,12 @@
   <form name="loginForm" ng-submit="vm.submitLoginForm(loginForm.$valid)" novalidate>
     <div class="layout layout-row">
       <md-input-container class="md-default-theme">
-        <md-select placeholder="Country" name="countryCode" data-ng-model="vm.countryCode" required>
-            <md-option ng-repeat="country in vm.countryPhoneCodes" value="{{country.code}}">
+        <md-select placeholder="Country" name="countryDialCode" data-ng-model="vm.countryDialCode" required>
+            <md-option ng-repeat="country in vm.countryPhoneCodes" value="{{country.name}}:{{country.dial_code}}">
               {{country.name}}({{country.dial_code}})
             </md-option>
         </md-select>
-        <div class="errors" data-ng-messages="loginForm.countryCode.$error" ng-if="loginForm.$dirty || vm.submitted">
+        <div class="errors" data-ng-messages="loginForm.countryDialCode.$error" ng-if="loginForm.$dirty || vm.submitted">
           <div data-ng-message="required">requried</div>
         </div>
       </md-input-container>
@@ -31,10 +31,10 @@
 
     <md-content class="spacer">
       <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
-        <md-button type="submit" id="login-continue-btn" class="md-raised md-primary">Continue</md-button>
+        <md-button type="submit" id="hp-confirm-btn" class="md-raised md-primary">Continue</md-button>
       </section>
       <section>
-        <div class="terms">By continuing you agree to <a href="http://www.homepass.com/terms/agent/">Terms</a> and <a href="http://homepass.com/terms/privacy/agent">Private Policy</a></div>
+        <div class="footer">By continuing you agree to <a href="http://www.homepass.com/terms/agent/">Terms</a> and <a href="http://homepass.com/terms/privacy/agent">Private Policy</a></div>
       </section>
     </md-content>
   </form>

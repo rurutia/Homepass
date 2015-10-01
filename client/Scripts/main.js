@@ -8,7 +8,8 @@ require(
     [
         'app',
         'util/countryPhoneCodes',
-        'login/controllers/loginController'
+        'login/controllers/loginController',
+        'verify/controllers/verifyController'
     ],
     function () {
         angular.bootstrap(document, ['homepassApp']);

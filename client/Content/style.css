@@ -16,17 +16,17 @@
 	margin-top: 170px;
 }
 
-#login-continue-btn {
+#hp-confirm-btn {
   background: #03a9f4;
   font-weight: bold;
 }
 
-.terms {
+.footer {
 	color: rgba(0,0,0,0.26);
 	text-align: center;
 }
 
-.terms a {
+.footer a {
 	color: rgba(0,0,0,0.26);
 	text-decoration: underline;
 }
