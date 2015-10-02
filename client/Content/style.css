@@ -1,5 +1,6 @@
 .bg-login {
 	background: #fff;
+	min-height: 850px;
 }
 
 .bg-image {
@@ -12,9 +13,14 @@
 	height: 30px;
 }
 
-.spacer {
-	margin-top: 170px;
+.spacer-30 {
+	margin-top: 30%;
 }
+
+.spacer-20 {
+	margin-top: 20%;
+}
+
 
 #hp-confirm-btn {
   background: #03a9f4;
