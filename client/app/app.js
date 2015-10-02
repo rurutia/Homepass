@@ -8,12 +8,12 @@ define([], function () {
         function ($routeProvider) {
             $routeProvider
             .when('/login/:countryDialCode?/:mobile?', {
-                templateUrl: '/app/login/views/login.html',
+                templateUrl: 'app/login/views/login.html',
                 controller: 'loginCtrl',
                 controllerAs: 'vm'
             })
             .when('/verify/:countryDialCode/:mobile', {
-                templateUrl: '/app/verify/views/verify.html',
+                templateUrl: 'app/verify/views/verify.html',
                 controller: 'verifyCtrl',
                 controllerAs: 'vm'
             })
