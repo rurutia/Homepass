@@ -1,10 +1,10 @@
+.bg-image {
+	background: url(images/Homepass-people-inspection-blue.jpg) no-repeat right;
+}
+
 .bg-login {
 	background: #fff;
 	min-height: 850px;
-}
-
-.bg-image {
-	background: url(images/Homepass-people-inspection-blue.jpg) no-repeat right;
 }
 
 .login-logo {
@@ -21,8 +21,7 @@
 	margin-top: 20%;
 }
 
-
-#hp-confirm-btn {
+#confirm-btn {
   background: #03a9f4;
   font-weight: bold;
 }
@@ -35,4 +34,8 @@
 .footer a {
 	color: rgba(0,0,0,0.26);
 	text-decoration: underline;
+}
+
+md-select .md-select-label.md-placeholder {
+	width: 100%;
 }
