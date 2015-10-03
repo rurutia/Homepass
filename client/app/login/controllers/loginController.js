@@ -12,7 +12,7 @@
         vm.mobile_pattern = _MOBILE_PATTERN;
         vm.countryDialCodes = COUNTRY_DIAL_CODES,
         vm.countryDialCode = $routeParams.countryDialCode ? $routeParams.countryDialCode : _DEFAULT_COUNTRY_CODE,
-        vm.mobile = $routeParams.mobile;
+        vm.mobile = $routeParams.mobile === _DEFAULT_VALID_MOBILE ? $routeParams.mobile : undefined;
 
         vm.submitLoginForm = function(isValid) {
             vm.submitted = true;
