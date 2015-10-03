@@ -28,15 +28,6 @@ Two new folders will be created in the project.
 * `node_modules` - contains the npm packages
 * `bower_components` - contains the angular framework files for testing
 
-###How to run
-
-Start the Node/Express server:
-
-* Open a command prompt
-* Navigate to the HomePass directory
-* Run 'npm install' at the command prompt
-* Run 'node server.js'
-
 ###Run the Application
 
 The project has been configured with a simple development Node server. The simplest way to start this server is:
@@ -49,7 +40,7 @@ Now browse to the app at localhost:3000.
 
 ### Running Unit Tests
 
-Run unit tests written in [Jasmine] with the [Karma Test Runner]
+Run unit tests written in `Jasmine` with `Karma Test Runner`
 
 * the configuration file is `karma.conf.js`
 * the unit tests located under `test` folder with file names ending with `...Spec.js`
