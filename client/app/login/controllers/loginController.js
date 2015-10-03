@@ -18,8 +18,6 @@ define(['app'], function (app) {
         vm.submitLoginForm = function(isValid) {
             vm.submitted = true;
             if(isValid) {
-                console.log(vm.countryDialCode);
-                console.log(vm.mobile);
                 if(vm.mobile !== _DEFAULT_VALID_MOBILE) {
                     _showAlertInvalidMobile(vm.mobile);
                 }
@@ -33,7 +31,7 @@ define(['app'], function (app) {
         var _showAlertInvalidMobile = function(mobile) {
             $mdDialog.show(
               $mdDialog.alert()
-              .parent(angular.element(document.querySelector('#login-panel')))
+              .parent(angular.element(document.querySelector('#login-container')))
               .clickOutsideToClose(true)
               .title('Invalid mobile: ' + mobile)
               .content('The number is invalid because there is no account. (dev only: ' + _DEFAULT_VALID_MOBILE + ')')

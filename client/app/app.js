@@ -18,15 +18,8 @@ define([], function () {
                 controllerAs: 'vm'
             })
             .otherwise({ redirectTo: '/login' });
-
         }]);
-
-    app.run(['$rootScope', '$location', 
-        function ($rootScope, $location) {
-
-
-        }]);
-
+    
     return app;
 
 });

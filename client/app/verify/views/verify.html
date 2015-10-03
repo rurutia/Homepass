@@ -6,15 +6,15 @@
 
 <div class="spacer-30"></div>
 
-<div class="md-padding">
+<div class="md-padding" id="verification-container">
   <h1>Verify your mobile</h1>
-  <form name="verifyForm" ng-submit="vm.submitverifyForm(verifyForm.$valid)" novalidate>
+  <form name="verifyForm" data-ng-submit="vm.submitVerifyForm(verifyForm.$valid)" novalidate>
     <div class="layout layout-row">
       <md-input-container class="md-default-theme">
         <label>Verification code</label>
-        <input class="md-input" name="code" data-ng-model="vm.code" data-ng-pattern="/^5502$/" required>
-        <div class="errors" data-ng-messages="verifyForm.code.$error" ng-if="verifyForm.$dirty || vm.submitted">
-          <div data-ng-message="pattern">the verfication code is invalid(for test only:5502).</div>
+        <input class="md-input" name="vcode" data-ng-model="vm.vcode" data-ng-pattern="vm.vcode_pattern" required>
+        <div class="errors" data-ng-messages="verifyForm.vcode.$error" data-ng-if="verifyForm.$dirty || vm.submitted">
+          <div data-ng-message="pattern">Only numbers are allowed in verfication code.</div>
           <div data-ng-message="required">requried</div>
         </div>
       </md-input-container>
