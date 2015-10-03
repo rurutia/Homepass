@@ -2,16 +2,16 @@
 
 define(['app'], function (app) {
 
-    var injectParams = ['$scope', '$location', '$routeParams', '$mdDialog', 'countryPhoneCodes'];
+    var injectParams = ['$scope', '$location', '$routeParams', '$mdDialog', 'COUNTRY_DIAL_CODES'];
 
-    var loginCtrl = function ($scope, $location, $routeParams, $mdDialog, countryPhoneCodes) {
+    var loginCtrl = function ($scope, $location, $routeParams, $mdDialog, COUNTRY_DIAL_CODES) {
     	var vm = this,
            _MOBILE_PATTERN = /^[0-9]{3,14}$/,
            _DEFAULT_COUNTRY_CODE = 'Australia:+61',
            _DEFAULT_VALID_MOBILE = '0411789776';
 
         vm.mobile_pattern = _MOBILE_PATTERN;
-        vm.countryPhoneCodes = countryPhoneCodes,
+        vm.countryDialCodes = COUNTRY_DIAL_CODES,
         vm.countryDialCode = $routeParams.countryDialCode ? $routeParams.countryDialCode : _DEFAULT_COUNTRY_CODE,
         vm.mobile = $routeParams.mobile;
 

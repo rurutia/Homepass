@@ -12,7 +12,7 @@
     <div class="layout layout-row">
       <md-input-container class="md-default-theme">
         <md-select placeholder="Country" name="countryDialCode" data-ng-model="vm.countryDialCode" required>
-            <md-option ng-repeat="country in vm.countryPhoneCodes" value="{{country.name}}:{{country.dial_code}}">
+            <md-option ng-repeat="country in vm.countryDialCodes" value="{{country.name}}:{{country.dial_code}}">
               {{country.name}}({{country.dial_code}})
             </md-option>
         </md-select>
