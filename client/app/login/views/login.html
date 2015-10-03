@@ -6,7 +6,7 @@
 
 <div class="spacer-20"></div>
 
-<div class="md-padding">
+<div class="md-padding" id="login-panel">
   <h1>Welcome</h1>
   <form name="loginForm" ng-submit="vm.submitLoginForm(loginForm.$valid)" novalidate>
     <div class="layout layout-row">
@@ -23,9 +23,9 @@
 
       <md-input-container class="md-default-theme">
         <label>Your mobile</label>
-        <input class="md-input" name="mobile" data-ng-model="vm.mobile" data-ng-pattern="/^0411789776$/" required>
+        <input class="md-input" name="mobile" data-ng-model="vm.mobile" data-ng-pattern="vm.mobile_pattern" required>
         <div class="errors" data-ng-messages="loginForm.mobile.$error" ng-if="loginForm.$dirty || vm.submitted">
-          <div data-ng-message="pattern">the number is invalid because there is no account(for test only:0411789776).</div>
+          <div data-ng-message="pattern">the mobile number is invalid.</div>
           <div data-ng-message="required">requried</div>
         </div>
       </md-input-container>

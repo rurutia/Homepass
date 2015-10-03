@@ -36,6 +36,7 @@
 	text-decoration: underline;
 }
 
-md-select .md-select-label.md-placeholder {
+md-select .md-select-label {
 	width: 100%;
 }
+
