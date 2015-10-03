@@ -1,10 +1,24 @@
 {
-    "name": "HomePass",
-    "author": "Michael Yu",
-    "version": "1.0.0",
-    "dependencies": {
-      "express": "4.11.2"
-     }
+  "name": "HomePass",
+  "author": "Michael Yu",
+  "version": "1.0.0",
+  "dependencies": {
+    "express": "4.11.2"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.3.15",
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.12.32",
+    "karma-chrome-launcher": "^0.1.3",
+    "karma-cli": "^0.1.1",
+    "karma-firefox-launcher": "^0.1.6",
+    "karma-jasmine": "^0.3.5",
+    "karma-safari-launcher": "^0.1.1"
+  },
+  "scripts": {
+    "postinstall": "bower install",
+    "prestart": "npm install",
+    "test": "karma start karma.conf.js",
+    "test-single-run": "karma start karma.conf.js  --single-run"
+  }
 }
-
-
