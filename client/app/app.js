@@ -1,8 +1,7 @@
-'use strict';
+(function() {
+    'use strict';
 
-define([], function () {
-
-    var app = angular.module('homepassApp', ['ngRoute', 'ngMaterial', 'ngMessages']);
+    var app = angular.module('homepassApp', ['ngRoute', 'ngMaterial', 'ngMessages', 'homepass.login']);
 
     app.config(['$routeProvider',
         function ($routeProvider) {
@@ -19,10 +18,8 @@ define([], function () {
             })
             .otherwise({ redirectTo: '/login' });
         }]);
-    
-    return app;
+})();
 
-});
 
 
 

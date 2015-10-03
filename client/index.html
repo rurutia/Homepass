@@ -8,7 +8,7 @@
 	<link href="Content/angular-material.min.css" rel="stylesheet" />
 	<link href="Content/style.css" rel="stylesheet" />
 </head>
-<body>
+<body data-ng-app="homepassApp">
 <div class="container-fluid">
 	<div class="row bg-image">
 	  <div class="bg-login col-xs-12 col-md-4 col-lg-6">
@@ -24,6 +24,10 @@
     <script src="Scripts/angular-messages.min.js"></script>
     <script src="Scripts/angular-material.min.js"></script>
 
-    <script src="Scripts/require.min.js" data-main="Scripts/main"></script>
+    <script src="app/app.js"></script>
+    <script src="app/util/countryDialCodes.js"></script>
+    <script src="app/login/controllers/loginController.js"></script>
+    <script src="app/verify/controllers/verifyController.js"></script>
+
 </body>
 </html>

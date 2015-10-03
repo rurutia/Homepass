@@ -1,6 +1,5 @@
-'use strict';
-
-define(['app'], function (app) {
+(function() {
+  'use strict';
 
     var injectParams = ['$scope', '$location', '$routeParams', '$mdDialog', 'COUNTRY_DIAL_CODES'];
 
@@ -43,6 +42,7 @@ define(['app'], function (app) {
 
     loginCtrl.$inject = injectParams;
 
-    app.controller('loginCtrl', loginCtrl);
+    angular.module('homepass.login', ['homepass.util'])
+      .controller('loginCtrl', loginCtrl);
 
-});
+})();
